@@ -1,43 +1,21 @@
-import java.awt.EventQueue;
-import java.awt.FlowLayout;
+package wallpaperManager.wallpaperManager;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.RenderingHints;
+import java.awt.image.BufferedImage;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.BorderLayout;
-import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.awt.event.ActionEvent;
-import java.awt.Font;
-import java.awt.Graphics2D;
-import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.Color;
-import java.awt.Button;
-import java.awt.CardLayout;
-import java.awt.Toolkit;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JSlider;
-import javax.swing.JSeparator;
-import java.awt.Component;
-import java.awt.Dimension;
-
-import javax.swing.Box;
-import javax.swing.JLayeredPane;
-import javax.swing.JDesktopPane;
-import javax.swing.JSplitPane;
-import java.awt.Panel;
-import java.awt.RenderingHints;
-import javax.swing.SwingConstants;
-import javax.swing.text.DateFormatter;
-import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-import javax.swing.JFormattedTextField;
+import javax.swing.SwingConstants;
 
-public class main {
+public class Main {
 
 	private JFrame frame;
 	JButton b1;
@@ -50,13 +28,14 @@ public class main {
 	
 	JTextField textField;
 
-	
-	
+	/**
+	 * Launch the application.
+	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					main window = new main();
+					Main window = new Main();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -68,7 +47,7 @@ public class main {
 	/**
 	 * Create the application.
 	 */
-	public main() {
+	public Main() {
 		initialize();
 	}
 
@@ -76,7 +55,6 @@ public class main {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		//textField.setColumns(10);
 		frame = new JFrame();
 		frame.setResizable(false);
 		frame.setBounds(100, 100, 850, 500);
@@ -121,9 +99,6 @@ public class main {
         frame.getContentPane().add(b1);
         frame.getContentPane().add(textField);
 
-		
-		 
-	        
 	}
 	
 	private Image getScaledImage(Image srcImg, int w, int h){
@@ -136,4 +111,5 @@ public class main {
 
 	    return resizedImg;
 	}
+
 }
