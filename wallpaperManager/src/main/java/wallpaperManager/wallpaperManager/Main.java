@@ -65,7 +65,7 @@ public class Main {
 		
 		
 		frame.getContentPane().setLayout(new BorderLayout());
-		JLabel label = new JLabel(new ImageIcon("C:\\Users\\spara\\Pictures\\background.jpg"));
+		JLabel label = new JLabel(new ImageIcon(System.getProperty("user.dir")+"\\Images\\background.jpg"));
 		frame.setContentPane(label);
 		frame.getContentPane().setLayout(null);
         b1=new JButton("I am a button");
